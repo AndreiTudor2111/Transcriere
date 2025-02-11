@@ -1,3 +1,7 @@
+import os
+os.system("pip install git+https://github.com/openai/whisper.git")
+os.system("pip install torch torchaudio")
+
 import streamlit as st
 import whisper
 import os
