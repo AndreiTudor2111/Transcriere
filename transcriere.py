@@ -10,6 +10,12 @@ os.system("pip install torch torchaudio --no-cache-dir")
 
 import streamlit as st
 import whisper
+import torch  # ✅ Adăugat pentru a forța CPU
+
+# ✅ Forțează utilizarea CPU
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+torch.device("cpu")
+
 from docx import Document
 import tempfile
 from pathlib import Path
