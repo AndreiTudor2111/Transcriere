@@ -1,6 +1,12 @@
 import os
-os.system("pip install git+https://github.com/openai/whisper.git")
-os.system("pip install torch torchaudio")
+import sys
+
+# Asigură-te că pachetele instalate sunt accesibile
+sys.path.append("/home/appuser/.local/lib/python3.12/site-packages")
+
+# Instalează Whisper și Torch dacă nu sunt deja instalate
+os.system("pip install git+https://github.com/openai/whisper.git --no-cache-dir")
+os.system("pip install torch torchaudio --no-cache-dir")
 
 import streamlit as st
 import whisper
