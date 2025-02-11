@@ -4,7 +4,6 @@ os.system("pip install torch torchaudio")
 
 import streamlit as st
 import whisper
-import os
 from docx import Document
 import tempfile
 from pathlib import Path
